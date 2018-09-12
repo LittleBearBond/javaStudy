@@ -4,9 +4,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
+import java.util.Date;
 
 @Entity
-public class Person {
+public class Users {
     public String getName() {
         return Name;
     }
@@ -47,6 +48,16 @@ public class Person {
     private Integer Age;
     private Integer Sex;
 
-    public Person() {
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
+    private Date createTime;
+
+    public Users() {
     }
 }
